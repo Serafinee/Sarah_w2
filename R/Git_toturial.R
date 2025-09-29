@@ -25,3 +25,6 @@ git push # push all your commits to Git Hub
 git add . # Adds all new files. "." refers to the main directory
 git add -u # adds all files that are already tracked, but ignores newly adde files
 gitt add *.R #Adds al files that are of a specific type, for example .R or .qmd etc.
+
+# moving tings to subfolders with commands
+mv source_file destination_folder
