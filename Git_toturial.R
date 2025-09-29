@@ -19,3 +19,9 @@ git pull #Pulls any upates from git Hub to your local computer
 git add . #Stages all files that have either been added or modified.
 git commit -m "commit mesage" #Commits your stages
 git push # push all your commits to Git Hub
+
+
+#Staging
+git add . # Adds all new files. "." refers to the main directory
+git add -u # adds all files that are already tracked, but ignores newly adde files
+gitt add *.R #Adds al files that are of a specific type, for example .R or .qmd etc.
