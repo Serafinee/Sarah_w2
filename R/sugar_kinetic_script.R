@@ -1,40 +1,10 @@
-install.packages("readxl")
-library("readxl")
+
+library(readxl)
 library(tidyverse)
 library(ggplot2)
 
-data <- read_excel("sugar_conc_xl.xlsx")
-head(data)
+data <- read_excel("data/sugar_conc_xl.xlsx")
 
-str(data)
-summary(data)
-gglot
-plot(data)
-
-data |> ggplot(aes(x=hours, y=glucose_NI, fill))
-
-#saving the plot
-
-test <- read_excel("easy_data.xlsx")          
-head(test)
-str(test)
-
-test |> 
-  ggplot(aes(x = hours, y = glucose_NI)) +
-  geom_point(color = "blue", size = 3)
-
-
-test |>
-  ggplot(aes(x = hours, y = glucose_NI)) +  # Removed the extra comma
-  geom_point(color = "black", size = 3)    # Correct placement of `+`           
-
-
-
-#trying something new = trying to plot multiple y values to the x 
-str(data)
-
-
-library(tidyr)
 
 # Reshape the data into long format for both glucose and xylose
 data_long <- data |> 
@@ -45,47 +15,7 @@ data_long <- data |>
     values_to = "value"                                    # New column for the values
   )
 
-# View the reshaped data
-print(data_long)
 
-
-#plot the data
-library(ggplot2)
-
-# Plot the data
-ggplot(data_long, aes(x = hours, y = value, color = group, linetype = measurement_type, shape = group)) +
-  geom_point(size = 3) +  # Add points
-  geom_line() + # Add lines connecting the points
-  scale_shape_manual(values = c("NI" = 16, "PI" = 17, "Shi" = 18)) +
-  labs(
-    x = "Hours",
-    y = "Sugar concentation",
-    color = "Group",
-    linetype = "Measurement Type",
-    shape = "Measurment Type"
-  ) +
-  theme_minimal()
-
-
-
-# Try again
-ggplot(data_long, aes(x = hours, y = value, color = group, shape = group, linetype = measurement_type)) +
-  geom_point(size = 3) +  # Add points with different shapes
-  geom_line() +           # Add lines with different linetypes
-  scale_shape_manual(values = c("NI" = 16, "PI" = 17, "Shi" = 15)) +  # Custom shapes for groups
-  scale_color_manual(values = c("NI" = "#66c2a5", "PI" = "#fc8d62", "Shi" = "#8da0cb")) +  # Custom colors for groups
-  labs(
-    x = "Hours",
-    y = "Sugar concentration",
-    color = "Treatment",
-    shape = "Treatment",  # Combine color and shape into one legend
-    linetype = "Sugar"  # Keep linetype for measurement type
-  ) +
-  theme_minimal() +
-  guides(
-    shape = guide_legend(override.aes = list(linetype = "blank")),  # Remove linetype from shape legend
-    color = guide_legend(override.aes = list(linetype = "blank"))   # Remove linetype from color legend
-  )
 
 
 #Renaming the label
@@ -127,32 +57,10 @@ theme(
 #saving the plot
 ggsave("sugar_kinetic_2.png", plot = final_plot, width = 8, height = 6, dpi = 300)
 
+saveRDS(final_plot, "figures/suger_kinetic_2.RDS")
 
 
 
-#Trying a different plot type (histogram)
-
-ggplot(data_long, aes(x = value)) +
-  geom_histogram() +
-  labs(
-    x = "Hours (t)",
-    y = "Average sugar concentration (g/L)",
-  ) +
-  theme_minimal()
-
-
-# Box plot try out
-ggplot(data_long, aes(x = as.factor(hours), y = value, fill = group, color = group)) +
-  geom_boxplot() +
-  facet_wrap(~measurement_type) +  # Separate panels for glucose and xylose
-  labs(
-    x = "Time (hours)",
-    y = "Sugar Concentration (g/L)",
-    fill = "Treatment Group",
-    color = "Treatment Group",
-    title = "Distribution of Sugar Concentration Over Time"
-  ) +
-  theme_minimal()
 
 # New plot different colors
 final_plot2 <-
@@ -193,6 +101,9 @@ final_plot2 <-
 #saving the plot
 ggsave("sugar_kinetic_1.png", plot = final_plot2, width = 8, height = 6, dpi = 300)
 
+saveRDS(final_plot2, "figures/suger_kinetic_1.RDS")
+
+
 
 # New plot different symbols
 final_plot3 <-
@@ -230,11 +141,11 @@ final_plot3 <-
     plot.caption = element_text(face = "italic", hjust = 0)
   )
 
-final_plot3
+
 #saving the plot
 ggsave("sugar_kinetic_3.png", plot = final_plot3, width = 8, height = 6, dpi = 300)
 
-
+saveRDS(final_plot3, "figures/suger_kinetic_3.RDS")
 
 
 
