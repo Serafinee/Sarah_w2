@@ -6,3 +6,7 @@
 *.jpeg
 *.Rproj.user
 .Rproj.user
+*.html
+*.js
+*.css
+*.woff
