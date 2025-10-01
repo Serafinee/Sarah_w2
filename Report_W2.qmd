@@ -4,3 +4,30 @@ format: html
 ---
 
 Testing commit message
+
+
+```{r}
+#| echo: false
+
+figure1 <- readRDS("./figures/suger_kinetic_1.RDS")
+
+figure1
+```
+
+
+```{r}
+#| echo: false
+
+figure2 <- readRDS("./figures/suger_kinetic_2.RDS")
+
+figure2
+```
+
+
+```{r}
+#| echo: false
+
+figure2 <- readRDS("./figures/suger_kinetic_2.RDS")
+
+figure2
+```
