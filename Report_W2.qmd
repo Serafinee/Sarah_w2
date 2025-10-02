@@ -5,8 +5,8 @@ date: "2025-10-01"
 format: html
 ---
 
-> **Mushrooms are the worlds greates superpower**
-> **If there were no mushrooms on planet earth, we would have drowned in waste a long time ago.**
+> **<span style="color: orange;">Mushrooms</span> are the worlds greates <span style="color: green;">superpower</span>**
+> **If there were no mushrooms on <span style="color: blue;">planet earth</span>, we would have drowned in <span style="color: purple;">waste</span> a long time ago.**
 
 # PROJECT DESCRIPTION
 This project explores an up-cycling process of the solid mushroom waste called spent mushroom substrate (SMS).
@@ -43,9 +43,10 @@ figure2
 ```
 
 
-Based on this figure we see that
-1. Shiitake SMS performs overall well in enzymatic conversion without pretreatment
-2. Both re-treated oyster mushroom SMSs show lower xylose concentration than shiitake
-  + This is because the post-hydrolysis is effective in hydrolyzing hemicellulose, thereby removing the hemicellulose before subjecting them to enzymatic conversion
-3. Although the original protocol requires 72 hours, we see that an adequate amount of sugars is produced for all SMSs types within 48 hours
-  + This means we can cut down incubation time by 24 hours.
+Based on this figure we see that:
+
+1. Shiitake SMS performs overall well in enzymatic conversion without pretreatment.
+2. Both re-treated oyster mushroom SMSs show lower xylose concentration than shiitake:
+   - This is because the post-hydrolysis is effective in hydrolyzing hemicellulose, thereby removing the hemicellulose before subjecting them to enzymatic conversion.
+3. Although the original protocol requires 72 hours, we see that an adequate amount of sugars is produced for all SMS types within 48 hours:
+   - This means we can cut down incubation time by 24 hours.
