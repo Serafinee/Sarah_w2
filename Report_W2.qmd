@@ -5,13 +5,14 @@ date: "2025-10-01"
 format: html
 ---
 
-This is a quarto report talking about some of my research with mushroom waste upcycling.
-
 
 # PROJECT DESCRIPTION
 This project explores an up-cycling process of the solid mushroom waste called spent mushroom substrate (SMS).
 By using enzymes such as cellulase and hemicellulases we can break down the plant material inside the SMS.
 This gives us a yield of sugars like glucose and xylose and allows us to ferment sugars into biopolymers or biofuel through other microorganisms.
+
+If you want to see more about the project [click here](https://www.inn.no/english/research/research-projects/musa/)
+
 
 ## Method design
 
@@ -19,17 +20,17 @@ The data for this project was obtained by taking a sample of the hydrolysate (th
 The samples were then analysed for the amount of glucose and xylose, giving us an enzymatic conversion kinetic.
 
 In this study we used and compared three different categories of SMS from two different mushroom species.
+
+SMS | Treatment
+---- | ----
+Shiitake | Raw
+NI oystermushroom | 175&deg;C held for 0 min
+PI oystermushroom | 175&deg;C held for 15 min
+
+
 Shiitake SMS was untreaded, while oystermushroom SMS was treated with a post-hydrolysis using two different conditions.
 
 
-```{r}
-#| echo: false
-
-figure1 <- readRDS("./figures/suger_kinetic_1.RDS")
-
-figure1
-```
-
 
 ```{r}
 #| echo: false
@@ -40,10 +41,9 @@ figure2
 ```
 
 
-```{r}
-#| echo: false
-
-figure2 <- readRDS("./figures/suger_kinetic_2.RDS")
-
-figure2
-```
+Based on this figure we see that
+1. Shiitake SMS performs overall well in enzymatic conversion without pretreatment
+2. Both re-treated oyster mushroom SMSs show lower xylose concentration than shiitake
+  + This is because the post-hydrolysis is effective in hydrolyzing hemicellulose, thereby removing the hemicellulose before subjecting them to enzymatic conversion
+3. Although the original protocol requires 72 hours, we see that an adequate amount of sugars is produced for all SMSs types within 48 hours
+  + This means we can cut down incubation time by 24 hours.
