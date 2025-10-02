@@ -5,6 +5,8 @@ date: "2025-10-01"
 format: html
 ---
 
+> **Mushrooms are the worlds greates superpower**
+> **If there were no mushrooms on planet earth, we would have drowned in waste a long time ago.**
 
 # PROJECT DESCRIPTION
 This project explores an up-cycling process of the solid mushroom waste called spent mushroom substrate (SMS).
@@ -21,6 +23,8 @@ The samples were then analysed for the amount of glucose and xylose, giving us a
 
 In this study we used and compared three different categories of SMS from two different mushroom species.
 
+Shiitake SMS was untreaded, while oystermushroom SMS was treated with a post-hydrolysis using two different conditions.
+
 SMS | Treatment
 ---- | ----
 Shiitake | Raw
@@ -28,9 +32,7 @@ NI oystermushroom | 175&deg;C held for 0 min
 PI oystermushroom | 175&deg;C held for 15 min
 
 
-Shiitake SMS was untreaded, while oystermushroom SMS was treated with a post-hydrolysis using two different conditions.
-
-
+The final enzyme kinetics looked like **this:**
 
 ```{r}
 #| echo: false
